@@ -1,128 +1,248 @@
-<!DOCTYPE html>
-<html lang="en">
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marvel Cinematic Universe | Experience the Infinity Saga & Beyond</title>
-    <meta name="description"
-        content="Explore the epic journey of the Marvel Cinematic Universe, featuring your favorite heroes and villains across the Multiverse.">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f0f1a;
+  color: #e6e6f0;
+  scroll-behavior: smooth;
+}
 
-<body>
-    <nav class="navbar" id="navbar">
-        <div class="logo">MARVEL</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#phases">Phases</a></li>
-            <li><a href="#characters">Heroes</a></li>
-            <li><a href="#multiverse">Multiverse</a></li>
-        </ul>
-        <button class="nav-cta">Subscribe</button>
-    </nav>
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: #0f0f1a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #1f1f30;
+}
 
-    <header class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">THE INFINITY SAGA<br>AND BEYOND</h1>
-            <p class="hero-subtitle">Witness the culmination of the greatest cinematic universe ever created. From Iron
-                Man to the Multiverse Saga.</p>
-            <div class="hero-buttons">
-                <a href="#phases" class="btn btn-primary">Explore Phases</a>
-                <a href="#trailer" class="btn btn-secondary">Watch Trailer</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span class="mouse">
-                <span class="wheel"></span>
-            </span>
-        </div>
-    </header>
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
 
-    <section id="phases" class="phases-section">
-        <h2 class="section-title">The Epic Journey</h2>
-        <div class="timeline">
-            <div class="phase-card fade-in">
-                <h3>Phase 1</h3>
-                <p>Avengers Assembled. The dawn of the universe with Iron Man, Captain America, and Thor.</p>
-            </div>
-            <div class="phase-card fade-in">
-                <h3>Phase 2</h3>
-                <p>Age of Ultron. New threats emerge and the universe expands with Guardians of the Galaxy.</p>
-            </div>
-            <div class="phase-card fade-in">
-                <h3>Phase 3</h3>
-                <p>Infinity War & Endgame. The culmination of everything that came before.</p>
-            </div>
-            <div class="phase-card fade-in">
-                <h3>Phase 4 & Beyond</h3>
-                <p>The Multiverse Saga. Infinite possibilities and new heroes take the mantle.</p>
-            </div>
-        </div>
-    </section>
+.logo span {
+  color: #7c5cff;
+}
 
-    <section id="characters" class="characters-section">
-        <h2 class="section-title">Iconic Heroes</h2>
-        <div class="character-grid">
-            <div class="character-card fade-in">
-                <div class="char-image" style="background-image: url(Assets/ironman.jpg);"></div>
-                <div class="char-info">
-                    <h3>Iron Man</h3>
-                    <p>Genius, Billionaire, Playboy, Philanthropist.</p>
-                </div>
-            </div>
-            <div class="character-card fade-in">
-                <div class="char-image" style="background-image: url(Assets/capamerica.jpg);"></div>
-                <div class="char-info">
-                    <h3>Captain America</h3>
-                    <p>The First Avenger. A symbol of hope and freedom.</p>
-                </div>
-            </div>
-            <div class="character-card fade-in">
-                <div class="char-image" style="background-image: url(Assets/thor.jpg);"></div>
-                <div class="char-info">
-                    <h3>Thor</h3>
-                    <p>God of Thunder. Prince of Asgard.</p>
-                </div>
-            </div>
-            <div class="character-card fade-in">
-                <div class="char-image" style="background-image: url(Assets/blackpanther.jpg);"></div>
-                <div class="char-info">
-                    <h3>Black Panther</h3>
-                    <p>King of Wakanda. Protector of his people.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
 
-    <section id="multiverse" class="multiverse-section">
-        <div class="multiverse-content fade-in">
-            <h2 class="section-title">Enter the Multiverse</h2>
-            <p>Reality is not a straight line. It is a prism of endless possibilities. Explore alternate timelines,
-                variants, and dimensions that defy logic and reason.</p>
-            <button class="btn btn-primary">Discover the Multiverse</button>
-        </div>
-    </section>
+.nav-links a {
+  text-decoration: none;
+  color: #c4c4d4;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="logo">MARVEL</div>
-            <p>Experience the greatest cinematic universe.</p>
-            <div class="socials">
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-                <a href="#">YouTube</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Marvel Cinematic Universe Fan Page. All rights reserved.</p>
-        </div>
-    </footer>
+.nav-links a:hover {
+  color: #7c5cff;
+}
 
-    <script src="script.js"></script>
-</body>
+/* Hero Section */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 8%;
+  background: radial-gradient(circle at top right, #1b1b2f, #0f0f1a 70%);
+}
 
-</html>
+.greeting {
+  color: #7c5cff;
+  font-size: 18px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.hero h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #a0a0b8;
+  margin-bottom: 20px;
+}
+
+.tagline {
+  font-size: 16px;
+  color: #8a8aa3;
+  max-width: 500px;
+  margin: 0 auto 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #7c5cff;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #6a4be0;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid #7c5cff;
+  color: #7c5cff;
+}
+
+.btn-outline:hover {
+  background-color: #7c5cff;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Section Common */
+.section {
+  padding: 80px 8%;
+}
+
+.alt-bg {
+  background-color: #14141f;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #7c5cff;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* About */
+.about-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 17px;
+  color: #b0b0c4;
+  line-height: 1.8;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background-color: #1b1b2f;
+  border: 1px solid #2a2a40;
+  padding: 24px;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #d0d0e0;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  border-color: #7c5cff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(124, 92, 255, 0.15);
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: #1b1b2f;
+  border: 1px solid #2a2a40;
+  padding: 28px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #7c5cff;
+  box-shadow: 0 12px 30px rgba(124, 92, 255, 0.15);
+}
+
+.project-card h3 {
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.project-card p {
+  color: #9a9ab0;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.project-link {
+  color: #7c5cff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* Contact */
+.contact-text {
+  text-align: center;
+  color: #a0a0b8;
+  margin-bottom: 32px;
+}
+
+.contact-links {
+  display:…
